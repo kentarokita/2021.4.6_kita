@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+.section-ttl {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.container__s {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.transition {
+  display: block;
+  width: 300px;
+  text-align: center;
+  margin: 40px auto 0;
+  background-color: #cd0224;
+  font-size: bold;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.content-p {
+  padding: 80px 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+}
+
+.header__flex {
+  height: 70px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__flex h1 {
+  font-size: 24px;
+  width: 80px;
+}
+
+.header__flex nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__flex nav ul li {
+  list-style: none;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+.header__flex nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.top {
+  background: url(img/mv.png) no-repeat center/cover;
+  height: 25vh;
+  width: 100vw;
+  position: relative;
+}
+
+.top__wrap {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top__wrap .top__message {
+  font-size: 30px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.business__flex {
+  border-bottom: 1px solid #222;
+}
+
+.business__flex__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #222;
+}
+
+.business__flex__item img {
+  width: 290px;
+}
+
+.business__flex__item .business__text {
+  width: calc(100% - 330px);
+}
+
+.business__flex__item .business__text h2 {
+  font-size: 24px;
+}
+
+.form {
+  background-color: #f5f6f9;
+}
+
+.form p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+}
+
+footer .container__s {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+footer .footer__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .footer__flex ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer__flex ul li .footer__link::after {
+  content: "|";
+  padding: 0px 10px;
+}
+
+footer .footer__flex ul li a {
+  text-decoration: none;
+  color: white;
+}
