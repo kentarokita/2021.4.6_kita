@@ -11,14 +11,19 @@ $sub-bg:#222;
 $btn-bg:#cd0224;
 $third-bg:#f5f6f9;
 
+$tab:768px;
+
 .section-ttl {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
 }
 .container__s {
-  width: 960px;
+  width: 1080px;
   margin: 0 auto;
+  @media screen and (max-width:$tab) {
+    width: 85%;
+  }
 }
 .transition {
   display: block;
@@ -152,7 +157,7 @@ header {
 }
 
 .top {
-  background: url(img/mv.png) no-repeat center/cover;
+  background: url(../img/mv.png) no-repeat center/cover;
   height: 25vh;
   width: 100vw;
   position: relative;
@@ -172,66 +177,77 @@ header {
   }
 }
 
-.recruit {
-  &__content {
-    h2 {
+
+.contact {
+  &__item {
+    margin-top: 20px;
+    &__label {
       font-weight: bold;
-      border-bottom: 1px solid $sub-bg;
-      font-size: 26px;
-      line-height: 1.6;
-    }
-    p {
-      margin-top: 20px;
-    }
-    &__table {
-      margin-top: 20px;
-      width: 100%;
-      tbody {
-        th {
-          border: 1px solid $sub-bg;
-          background-color: #f5f6f9;
-          font-weight: bold;
-          padding: 10px;
-          width: 30%;
-        }
-        td {
-          border: 1px solid $sub-bg;
-          padding-left: 10px;
-        }
+      .mark {
+        color: $btn-bg;
       }
     }
+    &__input {
+      display: block;
+      width: 100%;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+    textarea {
+      margin-top: 5px;
+      font-size: 16px;
+      display: block;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+  }
+  .btn {
+    border: none;
+    display: block;
+    margin:20px auto 0;
+    width: 300px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px ;
+    font-weight: bold;
   }
 }
 
-.form {
-  background-color: $third-bg;
-  p {
-    text-align: center;
-    margin-top: 10px;
-  }
-}
+
 
 footer{
   background-color:$sub-bg;
   color: white;
   padding: 20px;
-  .container__s {
-    width: 1080px;
-    margin: 0 auto;
-  }
   .footer__flex {
     @include flexbase;
     font-size: 12px;
     ul {
       @include flexbase;
+      @media screen and (max-width:$tab) {
+        display: block;
+        text-align: center;
+      }
       li {
         .footer__link::after {
           content: "|";
           padding: 0px 10px;
+          @media screen and (max-width:$tab){
+            content:"";
+          }
+        }
+        @media screen and (max-width:$tab) {
+          margin-top: 10px;
         }
         a {
           text-decoration: none;
           color: white;
+        }
+        a:hover {
+          background-color: $sub-bg;
+          opacity: 0.7;
         }
       }
     }

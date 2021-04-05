@@ -11,6 +11,8 @@ $sub-bg:#222;
 $btn-bg:#cd0224;
 $third-bg:#f5f6f9;
 
+$tab:768px;
+
 .section-ttl {
   text-align: center;
   font-size: 30px;
@@ -19,6 +21,9 @@ $third-bg:#f5f6f9;
 .container__s {
   width: 1080px;
   margin: 0 auto;
+  @media screen and (max-width:$tab) {
+    width: 85%;
+  }
 }
 .transition {
   display: block;
@@ -152,7 +157,7 @@ header {
 }
 
 .top {
-  background: url(img/mv.png) no-repeat center/cover;
+  background: url(../img/mv.png) no-repeat center/cover;
   height: 25vh;
   width: 100vw;
   position: relative;
@@ -206,23 +211,33 @@ footer{
   background-color:$sub-bg;
   color: white;
   padding: 20px;
-  .container__s {
-    width: 1080px;
-    margin: 0 auto;
-  }
   .footer__flex {
     @include flexbase;
     font-size: 12px;
     ul {
       @include flexbase;
+      @media screen and (max-width:$tab) {
+        display: block;
+        text-align: center;
+      }
       li {
         .footer__link::after {
           content: "|";
           padding: 0px 10px;
+          @media screen and (max-width:$tab){
+            content:"";
+          }
+        }
+        @media screen and (max-width:$tab) {
+          margin-top: 10px;
         }
         a {
           text-decoration: none;
           color: white;
+        }
+        a:hover {
+          background-color: $sub-bg;
+          opacity: 0.7;
         }
       }
     }
